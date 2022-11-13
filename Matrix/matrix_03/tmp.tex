@@ -1,0 +1,237 @@
+\documentclass[11pt,letterpaper]{ctexart}
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage[utf8]{inputenc} %solucion del problema de los acentos.
+\usepackage{epsfig,graphicx}
+\usepackage{multicol,pst-plot}
+\usepackage{pstricks}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\pagestyle{empty}
+\DeclareMathOperator{\tr}{Tr}
+\newcommand*{\op}[1]{\check{\mathbf#1}}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\mean}[1]{\langle #1 \rangle}
+\newcommand{\opvec}[1]{\check{\vec #1}}
+\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+
+\usepackage{lipsum}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\pagestyle{plain}
+\begin{flushleft}
+ID 22031212122 \\
+NAME xiaoning Shu\\
+\end{flushleft}
+
+\begin{flushright}\vspace{-18mm}
+\includegraphics[height=2.0cm]{logo.png}
+\end{flushright}
+ 
+\begin{center}\vspace{-0.1cm}
+\textbf{ \large THEORY OF MATRIX}\\
+\end{center}
+
+ 
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+\textbf{\large{Homework}}
+\\
+
+{1, 2, 6, 7}
+
+
+
+\bigskip
+\textbf{\large{Problems}}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%
+\item Problem 1%%%
+%%%%%%%%%%%%%%%%%%%%
+
+判别下列变换中哪些是线性变换：
+\begin{enumerate}
+	\item 在$R^3$中，设$x = (\xi_1, \xi_2, \xi_3), Tx = ({\xi_1}^2,{\xi_1} + {\xi_2},\xi_3)$;
+    \item 在矩阵空间中$R^{n \times n}$中，$Tx = BXC$,这里$B,C$是固定矩阵；
+    \item 在线性空间中$P_n$中，$Tf(t) = f(t + 1)$.
+\end{enumerate}
+
+\bigskip
+\textbf{\large{Answer}}
+\begin{enumerate}
+	\item 不是线性变换。
+	
+	因为${T(2x) = (4\xi_1^2, 2\xi_1 + 2\xi_2, 2\xi_3)}$,但是${2T(x) = (2\xi_1^2, 2\xi_1+ 2\xi_2, 2\xi_3)}$。
+    \item 是线性变换。
+    \item 是线性变换。
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%
+\item Problem 2%%%
+%%%%%%%%%%%%%%%%%%%%
+
+在$R^2$中，设 $x = (\xi_1, \xi_2)$. 证明$T_1x = (\xi_2. -\xi_1)$与$T_2x = (\xi_1,-\xi_2)$是 $R^2$的两个线性变换，并求$T_1 + T_2, T_1T_2$及$T_2T_1$ 
+
+\bigskip
+\textbf{\large{Answer}}
+
+	设${k,l \in R, y = (\alpha_1, \alpha_2)\in R^2}$,$kx + ly = (k\xi_1 + l\alpha_1, k\xi_2 + l\alpha_2)$
+	
+	${T_1(kx + ly) = (k\xi_2 + l\alpha_2,-k\xi_1 - l\alpha_1) = kT_1(x) + lT_1(y)}$
+
+	所以$T_1$是线性变换,同理$T_2$也是线性变换.
+
+	所以${(T_1 + T_2)x = T_1(x) + T_2(x) = (\xi_2 + \xi_1, -\xi_1 - \xi_2)}$
+
+	${(T_1T_2)x = T_1T_2(x) = (\-xi_2, -\xi_1)}$
+
+	${(T_2T_1)x = T_2T_1(x) = (\xi_2, \xi_1)}$.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+\item Problem 6%%%
+%%%%%%%%%%%%%%%%%%%%
+
+六个函数
+
+    $x_1 = e^{at} \cos{b} t$, \quad $x_2 = e_{at}\sin{b}t$, \quad $x_3 = t e^{at}\cos{b}t$
+
+    $x_4 = t e^{at} \sin{b} t$, \quad $x_5 = \frac{1}{2} t^2 e^{at} \cos{b} t$, \quad $x_6 =  \frac{1}{2} t^2 e^{at}\sin{b}t$
+
+    的所有实系数线性组合构成实数域R上的一个六维线性空间$V^6 = L(x_1, x_2,x_3,x_4,x_5,x_6)$,求微分变换D在基$x_1,x_2, \cdots, x_6$下的矩阵
+
+
+\bigskip
+\textbf{\large{Answer}}
+
+% \begin{itemize}
+% 	\item 
+% \end{itemize}
+${D_{x_1}} = ae^{at} \cos{b}t - e^{at} b\sin{b} t = ax_1 - bx_2$
+
+${D_{x_2}} = ae^{at} \sin{b}t + e^{at} b\cos{b} t = bx_1 + ax_2$
+
+${D_{x_3}} = e^{at} \cos{b}t + tae^{at} b\cos{b} t - te^{at} b\sin{b} t = x_1 + ax_3 -bx_4$
+
+${D_{x_4}} = e^{at} \sin{b}t - tae^{at} b\cos{b} t + te^{at} b\cos{b} t= x_2 + bx_3 + ax_4$
+
+${D_{x_5}} = te^{at} \cos{b}t + \frac{1}{2}t^2ae^{at} b\sin{b} t - \frac{1}{2}t^2e^{at} b\sin{b} t= x_3 + ax_5 - bx_6$
+
+${D_{x_6}} = te^{at} \sin{b}t + \frac{1}{2}t^2ae^{at} \sin{b} t + + \frac{1}{2}t^2e^{at} b\cos{b} t = x_4 + bx_5 + ax_6$
+
+所以
+
+
+$$D = \begin{bmatrix}
+    a & b & 1 & 0 & 0 & 0 \\
+	-b & a & 0 & 1 & 0 & 0 \\
+	0 & 0 & a & b & 1 & 0 \\
+	0 & 0 & -b & a & 0 & 1 \\
+	0 & 0 & 0 & 0 & a & b \\
+	0 & 0 & 0 & 0 & -b & a
+\end{bmatrix}$$
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+\item Problem 7%%%
+%%%%%%%%%%%%%%%%%%%%
+
+已知$R^3$的线性变换T在基$x_1 = (-1,1,1), x_2 = (1,0,-1),x_3 = (0,1,1)$下的矩阵是
+$$\begin{bmatrix}
+    1 & 0 & 1 \\
+	1 & 1 & 0 \\
+	-1 & 2 & 1
+\end{bmatrix}$$
+求T在基${e_1 = (1, 0, 0), e_2 = (0, 1, 0), e_3 = (0, 0, 1)}$下的矩阵。
+
+\bigskip
+\textbf{\large{Answer}}
+
+由题意得：
+$C^{-1} = $
+$\begin{bmatrix}
+    1 & 0 & 1 \\
+	1 & 1 & 0 \\
+	-1 & 2 & 1
+\end{bmatrix}$
+
+所以在新基下的矩阵为
+$C^{-1}
+\begin{bmatrix}
+    1 & 0 & 1 \\
+	1 & 1 & 0 \\
+	-1 & 2 & 1
+\end{bmatrix}C = 
+\begin{bmatrix}
+    -1 & 1 & -2 \\
+	2 & 2 & 0 \\
+	3 & 0 & 2
+\end{bmatrix}
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+\end{document}
+

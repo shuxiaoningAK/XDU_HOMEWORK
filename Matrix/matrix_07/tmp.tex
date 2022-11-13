@@ -1,0 +1,131 @@
+\documentclass[11pt,letterpaper]{ctexart}
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage[utf8]{inputenc} %solucion del problema de los acentos.
+\usepackage{epsfig,graphicx}
+\usepackage{multicol,pst-plot}
+\usepackage{pstricks}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\pagestyle{empty}
+\DeclareMathOperator{\tr}{Tr}
+\newcommand*{\op}[1]{\check{\mathbf#1}}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\mean}[1]{\langle #1 \rangle}
+\newcommand{\opvec}[1]{\check{\vec #1}}
+\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+
+\usepackage{lipsum}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\pagestyle{plain}
+\begin{flushleft}
+ID 22031212122 \\
+NAME xiaoning Shu\\
+\end{flushleft}
+
+\begin{flushright}\vspace{-18mm}
+\includegraphics[height=2.0cm]{logo.png}
+\end{flushright}
+ 
+\begin{center}\vspace{-0.1cm}
+\textbf{ \large THEORY OF MATRIX}\\
+\end{center}
+
+ 
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+\textbf{\large{Homework}}
+\\
+
+{3, 4}
+
+
+
+\bigskip
+\textbf{\large{Problems}}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%
+\item Problem 3%%%
+%%%%%%%%%%%%%%%%%%%%
+
+若$A$为实反对称矩阵$(A^T = -A),$则$e^A$为正交矩阵
+
+\bigskip
+\textbf{\large{Answer}}
+
+	由$P152$页推论
+
+	可知$(e^A)^T = e^{A^T} = e^{-A}$
+
+	于是$e^A(e^A)^T = e^Ae^{A^T} = e^{A - A} = e^0 = I$
+
+	所以$e^A$是正交矩阵。
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+\item Problem 4%%%
+%%%%%%%%%%%%%%%%%%%%
+
+若$A$是Hermite矩阵,则$e^{jA}$是酉矩阵
+
+\bigskip
+\textbf{\large{Answer}}
+
+	由$Problem 3$可知 $(e^{iA})^H = (e^{iA})^H = e^{-iA}$
+
+	于是有$e^{iA}(e^{iA})^H = e^{iA}e^{-iA} = e^0 = I$
+
+	所以$e^{iA}$是酉矩阵。
+
+
+
+
+
+
+\end{enumerate}
+\end{document}
+
